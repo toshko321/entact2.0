@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "users": {
+      ".write": true,
+      ".read": true
+    },
+    "allEvents": {
+      ".write": true,
+      ".read": true
+    }
+  }
+}

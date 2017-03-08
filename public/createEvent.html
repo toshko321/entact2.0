@@ -95,66 +95,46 @@
 
       <!-- Form Body -->
       
-<div class="row" align="middle">
-  <h3>Create Event</h3>
-        <!-- splitting it up into two columns -->
-        <div class="col-md-6">
-          <!-- Event Name -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="name" placeholder="(e.g. Study Group, Potluck)">
-            <label class="mdl-textfield__label field-label" for="name">Event Name</label>
-          </div>
 
-          <!-- Details -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <textarea class="mdl-textfield__input" type="text" id="details"placeholder="(e.g. Study Group for CSE 170 Final)"></textarea>
-            <label class="mdl-textfield__label field-label" for="name">Description</label>
-          </div>
 
-          <!-- Creator -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="creator" placeholder="(e.g. John Doe, UCSD VR Club)">
-            <label class="mdl-textfield__label field-label" for="name">Creator</label>
-          </div>
+      <!-- NEW FORM -->
+        <form class="col-md-12" id="addFriendForm" role="form" method="get" action="/add">
+          <h3>Add a friend</h3>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="creator">Creator:</label>
+              <input type="text" class="form-control" id="creator" placeholder="Creator" name="creator">
+            </div>
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <input type="text" class="form-control" id="description" placeholder="Description" name="description">
+            </div>
+            <div class="form-group">
+              <label for="location">Location:</label>
+              <input type="text" class="form-control" id="location" placeholder="Location" name="location">
+            </div>
+            <div class="form-group">
+              <label for="time">Time:</label>
+              <input type="text" class="form-control" id="time" placeholder="Time" name="time">
+            </div>
+            <div class="form-group">
+              <label for="items">Items:</label>
+              <input type="text" class="form-control" id="items" placeholder="Items" name="items">
+            </div>
+            <div class="form-group">
+              <label for="members">Members:</label>
+              <input type="text" class="form-control" id="members" placeholder="Members" name="members">
+            </div>
+            <div class="form-group">
+              <label for="date">Date:</label>
+              <input type="text" class="form-control" id="date" placeholder="Date" name="date">
+            </div>
+            <input type="submit" id="submitBtn" class="btn btn-default" value="Create Event"></input>
+        </form>
 
-          <!-- Location -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="location" placeholder="(e.g. Geisel Library, Mission Bay)">
-            <label class="mdl-textfield__label field-label" for="name">Location</label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <!-- Date -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="date" id="date" placeholder="">
-            <label class="mdl-textfield__label field-label" for="name">Date</label>
-          </div>
-
-          <!-- Time -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="time" id="time" placeholder="">
-            <label class="mdl-textfield__label field-label" for="name">Time</label>
-          </div>
-
-          <!-- Items -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="items" placeholder="(e.g. Football, Snacks, Napkins)">
-            <label class="mdl-textfield__label field-label" for="name">Items</label>
-          </div>
-
-          <!-- Members -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="number" id="members"placeholder="Maximum number of members">
-            <label class="mdl-textfield__label field-label" for="name">Members</label>
-          </div>
-        </div>
-
-  <!-- Submit Button -->
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                            data-toggle="modal" data-target="#MyModal" onclick="submitClick()" id="create-event">
-                      Create Event
-          </button>
-  </div>
 </div>
           
 
