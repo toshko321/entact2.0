@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Entact</title>
+
+  <!-- Meta Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="411092546108-jukadttq51mtpt5nc6huvdjhcphh246g.apps.googleusercontent.com">
+
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
+
+  <!-- Local/Custom CSS Links -->
+  <link rel="stylesheet" href="css/style_MDL.css">
+  <link rel="stylesheet" href="css/bootstrap_less.css">
+
+  <!-- JavaScript Links -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <!-- Local/Custom JavaScript Links -->
+  <script src="js/index.js" type="text/javascript"></script>
+  <script src="js/createEvent.js" type="text/javascript"></script>
+  <script src="js/loginPage.js" type="text/javascript"></script>
+
+  <!-- For FAQ Button -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Pacifico|Yellowtail" type="text/css">
+
+  <!-- Favicon -->
+  <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+
+</head>
+
+
+<body>
+
+<!-- Layout Wrapper -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+  <!-- Page Header -->
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Header Title -->
+      <span class="mdl-layout-title nav-header"><a href="index.html" style="text-decoration:none; color:inherit">Entact</a></span>
+
+      <div class="mdl-layout-spacer"></div>
+    </div>
+  </header>
+  <!-- End of Page Header -->
+
+
+  <!-- Sidebar -->
+  <div class="mdl-layout__drawer">
+    <nav class="mdl-navigation">
+      <!-- Join Events Link -->
+      <a class="mdl-navigation__link nav-link" href="browseEvents.html">
+       <i class="material-icons nav-icon">event</i>Join Events
+      </a>
+      <!-- Create Event Link -->
+      <a class="mdl-navigation__link nav-link" href="createEvent.html">
+        <i class="material-icons nav-icon">add</i>Create Event
+      </a>
+      <!-- FAQ Link -->
+      <a class="mdl-navigation__link nav-link" href="faq.html">
+        <i class="material-icons nav-icon">help_outline</i>FAQ
+      </a>
+      <!-- Logout Link -->
+      <a class="mdl-navigation__link nav-link" style="cursor: pointer;" onClick="signOut()">
+        <i class="material-icons nav-icon">exit_to_app</i>Logout
+      </a>
+    </nav>
+  </div>
+  <!-- End of Sidebar -->
+
+
+  <!-- _________________________ PAGE CONTENT STARTS HERE _________________________ -->
+  <main class="mdl-layout__content mdl-layout--fixed-drawer mdl-color--grey">
+    <div class="page-content">
+      <!-- Your content goes here -->
+      <div>
+        <div>
+
+          <!-- FAQ content-->
+          <div class="modal-content">
+            <!-- First content -->
+            <div class="modal-header">
+              <h4 class="modal-title" align="middle">Register Information</h4>
+            </div>
+            <div class="modal-body">
+              <p>If you do not have a Google account, please click the Register button and select Create Account. This will allow you to create a new Google account with ease.</p>
+            </div>
+
+            <!-- Second content -->
+            <div class="modal-header">
+              <h4 class="modal-title" align="middle">Log In Information</h4>
+            </div>
+            <div class="modal-body">
+              <p>You may enter any email that is linked with Google. For example: tppetrov@ucsd.edu or teodorppetrov@gmail.com. It must be a real, valid existing account.</p>
+            </div>
+
+            <!-- Third content -->
+            <div class="modal-header">
+              <h4 class="modal-title" align="middle">What Can I Do On This Site?</h4>
+            </div>
+            <div class="modal-body">
+              <p>Once you are logged into your Google account, you will be given options in the sidebar menu which allow you to create and browse events. You may also check the events that you have created and joined.</p>
+            </div>
+
+            <!-- Fourth content -->
+            <div class="modal-header">
+              <h4 class="modal-title" align="middle">Why Did My Event Not Get Created?</h4>
+            </div>
+            <div class="modal-body">
+              <p>Sometimes when it is your first time logging in with Google on our site, it does not realize that there is a signed in user and it does not write it to the database. However, just fill it out a second time and submit the event.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- _________________________ PAGE CONTENT ENDS HERE _________________________ -->
+
+</div>
+<!-- End of Layout Wrapper -->
+
+</body>
+</html>
