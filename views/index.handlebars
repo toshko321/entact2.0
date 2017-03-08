@@ -1,97 +1,106 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-
-<html>
 <head>
-	<title>Entact</title>
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,
-	initial-scale=1.0">
-	<meta name="google-signin-scope" content="profile email">
-  	<meta name="google-signin-client_id" content="411092546108-jukadttq51mtpt5nc6huvdjhcphh246g.apps.googleusercontent.com">
+  <title>Entact</title>
 
-	<!-- Link CSS -->
+  <!-- Meta Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="411092546108-jukadttq51mtpt5nc6huvdjhcphh246g.apps.googleusercontent.com">
 
-	<!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css"> -->
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
 
-	<!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"> -->
+  <!-- Local/Custom CSS Links -->
+  <link rel="stylesheet" href="css/style_MDL.css">
+  <link rel="stylesheet" href="css/bootstrap_less.css">
+  <link rel="stylesheet" href="css/materialize_less_A.css">
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  	
-  	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
 
-	<link rel="stylesheet" type="text/css" href="/css/hci-friends.css">
-	
-  	<!-- Local/Custom CSS Links -->
+  <!-- JavaScript Links -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
-  	<link rel="stylesheet" href="/css/style_MDL.css">
 
-  	<link rel="stylesheet" href="/css/bootstrap_less.css">
+  <!-- Local/Custom JavaScript Links -->
+  <script src="js/index.js" type="text/javascript"></script>
+  <script src="js/loginPage.js" type="text/javascript"></script>
+  <script src="js/browseEvents.js" type="text/javascript"></script>
+  <!-- <script src="js/joinBtn.js" type="text/javascript"></script> -->
 
-  	<link rel="stylesheet" href="/css/materialize_less_A.css">
 
-	<!-- Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Pacifico|Yellowtail" type="text/css">
 
-	<!-- Favicon -->
-	<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'/ >
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Pacifico|Yellowtail" type="text/css">
 
+  <!-- Favicon -->
+  <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 
 </head>
 
+
 <body>
-	<!-- Page Content -->
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 
-	<!-- Page Header -->
-	<header class="mdl-layout__header">
-		<div class="mdl-layout__header-row">
-		  <!-- Header Title -->
-		  <span class="mdl-layout-title nav-header"><a href="index.html" style="text-decoration:none; color:inherit">Entact</a></span>
+<!-- Layout Wrapper -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 
-		  <div class="mdl-layout-spacer"></div>
+  <!-- Page Header -->
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Header Title -->
+      <span class="mdl-layout-title nav-header"><a href="index.html" style="text-decoration:none; color:inherit">Entact</a></span>
 
-		  <!-- Sign in Link -->
-		  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="signInBtn" 
-		          href=""
-		          onclick="onSignIn()">
-		    Sign in
-		  </button>
-		</div>
-	</header>
-	<!-- End of Page Header -->
+      <div class="mdl-layout-spacer"></div>
 
-	<!-- Sidebar -->
-	<div class="mdl-layout__drawer">
-		<nav class="mdl-navigation" style="color: black">
-		  <!-- Join Events Link -->
-		  <a class="mdl-navigation__link nav-link" href="#">
-		   <i class="material-icons nav-icon mdl-">event</i>Join Events
-		  </a>
-		  <!-- Create Event Link -->
-		  <a class="mdl-navigation__link nav-link" href="/createEvent.html">
-		    <i class="material-icons nav-icon">add</i>Create Event
-		  </a>
-		  <!-- FAQ Link -->
-		  <a class="mdl-navigation__link nav-link" href="/faq.html">
-		    <i class="material-icons nav-icon">help_outline</i>FAQ
-		  </a>
-		  <!-- Logout Link -->
-		  <a class="mdl-navigation__link nav-link" style="cursor: pointer;" onClick="signOut()">
-		    <i class="material-icons nav-icon">exit_to_app</i>Logout
-		  </a>
-		</nav>
-	</div>
-	<!-- End of Sidebar -->
+      <!-- Sign in Link -->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="signInBtn" 
+              href=""
+              onclick="onSignIn()">
+        Sign in
+      </button>
+    </div>
+  </header>
+  <!-- End of Page Header -->
 
-	<main class="mdl-layout__content mdl-layout--fixed-drawer ">
-    	<div class="page-content">
-    		<!-- Your content goes here -->
-      		<ul class="collapsible collapsible-accordion" id="event_list" data-collapsible="accordion">
 
-      	{{#each friends}}
-	    <!-- List Item -->
+  <!-- Sidebar -->
+  <div class="mdl-layout__drawer">
+    <nav class="mdl-navigation">
+      <!-- Join Events Link -->
+      <a class="mdl-navigation__link nav-link" href="/">
+       <i class="material-icons nav-icon mdl-">event</i>Join Events
+      </a>
+      <!-- Create Event Link -->
+      <a class="mdl-navigation__link nav-link" href="createEvent.html">
+        <i class="material-icons nav-icon">add</i>Create Event
+      </a>
+      <!-- FAQ Link -->
+      <a class="mdl-navigation__link nav-link" href="faq.html">
+        <i class="material-icons nav-icon">help_outline</i>FAQ
+      </a>
+      <!-- Logout Link -->
+      <a class="mdl-navigation__link nav-link" style="cursor: pointer;" onClick="signOut()">
+        <i class="material-icons nav-icon">exit_to_app</i>Logout
+      </a>
+    </nav>
+  </div>
+  <!-- End of Sidebar -->
+
+
+  <!-- _________________________ PAGE CONTENT STARTS HERE _________________________ -->
+ <main class="mdl-layout__content mdl-layout--fixed-drawer ">
+      <div class="page-content">
+        <!-- Your content goes here -->
+          <ul class="collapsible collapsible-accordion" id="event_list" data-collapsible="accordion">
+
+        {{#each friends}}
+      <!-- List Item -->
         <li>
           <!-- Event Header -->
           <div class="collapsible-header">
@@ -104,13 +113,13 @@
               <!-- Date and Time -->
               <div>
                 <i class="material-icons list-icon">today</i>
-                <span>2/23/17, 10:00AM</span>
+                <span>{{date}}, {{time}}</span>
                 <span style="margin-right: 5px; margin-left: 5px;"></span>
               </div>
               <!-- Location -->
               <div>
                 <i class="material-icons list-icon">location_on</i>
-                <span>Geisel Library</span>
+                <span>{{location}}</span>
               </div>
             </div>
           </div>
@@ -122,13 +131,18 @@
             </br>
             <!-- More Event Details -->
             <div style="display: inline-block;">
-              <b>Items</b> Pancakes, Maple Syrup, Butter</br>
-              <b>Members</b> 100</br>
-              <b> Created by</b> John Doe</br>  
+              <b>All Items Required</b> {{items}}</br>
+              <b>Total Members</b> {{members}}</br>
+              <b> Created by</b> {{creator}}</br>  
             </div>
             <!-- Join Button -->
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent joinEvent" data-toggle="modal" data-target="#MyModal" onclick="showJoined(this)" id="join-event">Join Event</button>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent joinEvent hidden" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" onclick="showJoin(this)" id="joined-event">Joined</button>
+            <div class="mdl-typography--text-right">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent join-event"
+                      data-toggle="modal" data-target="#MyModal" onclick="showJoined(this)" id="join-event">Join Event</button>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hidden"
+                      data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" id="joined-event">Joined</button>
+
+
           </div>
         </li>
         <!-- End of List Item -->
@@ -136,32 +150,174 @@
 
         </ul>
         </div>
-		</main>
-	</div>
+    </main>
+  <!-- _________________________ PAGE CONTENT ENDS HERE _________________________ -->
 
-	<!-- Link JavaScript -->
- 	<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+</div>
+  <!-- Confirmation Dialog -->
+  <dialog class="mdl-dialog">
+    <h4 class="mdl-dialog__title mdl-typography--text-center">Join</h4> 
+    <h4 class="mdl-dialog__title mdl-typography--text-center">Confirmation</h4>
+    <div class="mdl-dialog__content">
+      <div class="mdl-typography--text-center" style="color:black">
+        Thank you for Joining the event!
 
-	<script src="/js/jquery-1.11.0.js" type="text/javascript"></script>
+      </div>
+      <hr>
+      <div class="mdl-typography--text-center" style="color:blue">
+        The App That Gets You Intact
+      </div>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close" onclick="closeDialog()"><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
+    </div>
+  </dialog>
+  <!-- End of Confirmation Dialog -->
 
-  	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <!-- Confirmation Dialog -->
+  <dialog class="mdl-dialog" id="login-conf">
+    <h4 class="mdl-dialog__title">Login Confirmation</h4>
+    <div class="mdl-dialog__content">
+      <div class="mdl-typography--text-center" style="color:black">
+        Thank you for logging in!
+      </div>
+      <hr>
+      <div class="mdl-typography--text-center" style="color:blue">
+        The App That Gets You Intact
+      </div>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close" ><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
+    </div>
+  </dialog>
+  <!-- End of Confirmation Dialog -->
+<!-- End of Layout Wrapper -->
+  <!-- Logout Confirmation Dialog -->
+  <dialog class="mdl-dialog" id="logout-conf">
+    <h4 class="mdl-dialog__title">Log Out Confirmation</h4>
+    <div class="mdl-dialog__content">
+      <div class="mdl-typography--text-center" style="color:black">
+        You Have Logged Out!
+      </div>
+      <hr>
+      <div class="mdl-typography--text-center" style="color:blue">
+        The App That Gets You Intact
+      </div>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close" ><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
+    </div>
+  </dialog>
+  <!-- End of Confirmation Dialog -->
 
-	<!-- <script src="/js/bootstrap.js" type="text/javascript"></script> -->
-
-  	<script src="https://apis.google.com/js/platform.js" async defer></script>
-
- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
-	<script src="/js/hci-friends.js" type="text/javascript"></script>
-  	
-  	<script src="/js/index.js" type="text/javascript"></script>
-
-  	<script src="/js/loginPage.js" type="text/javascript"></script>
-
- 	<!-- <script src="js/browseEvents.js" type="text/javascript"></script> -->
+<!-- Google Autocomplete Location Script -->
 
 
-	
+<!-- End of Google Autocomplete Location Script -->
+
+<script>
+  function showJoin(button)
+  {
+    console.log("showJoin Called");
+    $(button).addClass("hidden");
+    $(button).prev().removeClass("hidden");
+  }
+
+  function showJoined(button)
+  {
+    console.log("showJoined Called");
+    dialog.showModal();
+    $(button).addClass("hidden");
+    $(button).next().removeClass("hidden");
+  }
+
+  function mouseOverCancel(button) {
+    $(button).text("Cancel");
+    $(button).addClass("mdl-color--red");
+  }
+
+  function mouseOutCancel(button) {
+    $(button).text("Joined");
+    $(button).removeClass("mdl-color--red");
+  }
+
+
+</script>
+
+<!-- Dialog Pop-up Script -->
+<script>
+  var dialog = document.querySelector('dialog');
+  var showDialogButton = document.querySelector('.join');
+  if (! dialog.showModal) {
+    dialogPolyfill.registerDialog(dialog);
+  }
+  showDialogButton.addEventListener('click', function() {
+    dialog.showModal();
+  });
+  dialog.querySelector('.close').addEventListener('click', function() {
+    dialog.close();
+  });
+</script>
+<!-- End of Dialog Pop-up Script -->
+
+<!-- Dialog Pop-up Script -->
+<script>
+  var dialogLogin = document.querySelector('#login-conf');
+  var showDialogLoginButton = document.querySelector('#signInBtn');
+  if (! dialogLogin.showModal) {
+    dialogPolyfill.registerDialog(dialogLogin);
+  }
+  showDialogLoginButton.addEventListener('click', function() {
+    console.log('Login Confimation');
+  });
+  dialogLogin.querySelector('.close').addEventListener('click', function() {
+    dialogLogin.close();
+  });
+</script>
+<!-- End of Dialog Pop-up Script -->
+<!-- Logout Dialog Pop-up Script -->
+<script>
+  var dialogLogout = document.querySelector('#logout-conf');
+  var showDialogLogoutButton = document.querySelector('#signOutBtn');
+  if (! dialogLogout.showModal) {
+    dialogPolyfill.registerDialog(dialogLogout);
+  }
+  showDialogLogoutButton.addEventListener('click', function() {
+    console.log('Logout Confirmation');
+  });
+  dialogLogout.querySelector('.close').addEventListener('click', function() {
+    dialogLogout.close();
+  });
+</script>
+<!-- End of Dialog Pop-up Script -->
+
+<!-- Popup Window Script -->
+<script type="text/javascript">
+  function popup(mylink, windowname) {
+    if (! window.focus)
+      return true;
+      var href;
+    if (typeof(mylink) == 'string')
+      href=mylink;
+    else href=mylink.href;
+    window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+      return false; }
+</script>
+<!-- End of Popup Window Script -->
+
+<!-- Tests -->
+<script type="text/javascript">
+    function testText() {
+        console.log('Hello World');
+        dialog.showModal();
+    }
+
+    function closeDialog () {
+        dialog.close();
+    }
+</script>
+<!-- End of Tests -->
 
 </body>
+<footer style="text-align:center; position:fixed; bottom:0; left:0; width:100%">Copyright &copy; 2017 Entact, Inc. All rights reserved.</footer>
 </html>
