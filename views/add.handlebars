@@ -126,7 +126,9 @@
               <b>Members</b> {{members}}</br>
               <b> Created by</b> {{creator}}</br>  
             </div>
-            <!-- Join Button -->
+            <!-- Join Button/joined, have to define javascript functions -->
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent joinEvent" data-toggle="modal" data-target="#MyModal" onclick="showJoined(this)" id="join-event">Join Event</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent joinEvent hidden" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" onclick="showJoin(this)" id="joined-event">Joined</button>
           </div>
         </li>
         <!-- End of List Item -->
