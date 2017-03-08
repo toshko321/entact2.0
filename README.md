@@ -1,6 +1,2 @@
-Lab 5
+Entact App
 ====
-
-Lab 5: Putting it together
-
-Changes changes changes
