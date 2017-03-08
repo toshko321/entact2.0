@@ -49,13 +49,6 @@
       <span class="mdl-layout-title nav-header"><a href="index.html" style="text-decoration:none; color:inherit">Entact</a></span>
 
       <div class="mdl-layout-spacer"></div>
-
-      <!-- Sign in Link -->
-      <button id="signInBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-              href=""
-              onclick="onSignIn()">
-        Sign in
-      </button>
     </div>
   </header>
   <!-- End of Page Header -->
@@ -65,7 +58,7 @@
   <div class="mdl-layout__drawer">
     <nav class="mdl-navigation">
       <!-- Join Events Link -->
-      <a class="mdl-navigation__link nav-link" href="/">
+      <a class="mdl-navigation__link nav-link" href="/browse">
        <i class="material-icons nav-icon">event</i>Join Events
       </a>
       <!-- Create Event Link -->
@@ -181,7 +174,7 @@
         <!-- End of Confirmation Dialog -->
 
         <!-- Confirmation Dialog -->
-        <dialog class="mdl-dialog" id="login-conf">
+        <!-- <dialog class="mdl-dialog" id="login-conf">
           <h4 class="mdl-dialog__title">Login Confirmation</h4>
           <div class="mdl-dialog__content">
             <div class="mdl-typography--text-center" style="color:black">
@@ -195,8 +188,26 @@
           <div class="mdl-dialog__actions">
             <button type="button" class="mdl-button close" ><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
           </div>
-        </dialog>
+        </dialog> -->
         <!-- End of Confirmation Dialog -->
+        <!-- Logout Confirmation Dialog -->
+  <dialog class="mdl-dialog" id="logout-conf">
+    <h4 class="mdl-dialog__title">Log Out Confirmation</h4>
+    <div class="mdl-dialog__content">
+      <div class="mdl-typography--text-center" style="color:black">
+        Thank You For Using Entact!</br> 
+        Please refresh the page if you wish to use the site again.
+      </div>
+      <hr>
+      <div class="mdl-typography--text-center" style="color:blue">
+        The App That Gets You Intact
+      </div>
+    </div>
+    <!-- <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close" ><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
+    </div> -->
+  </dialog>
+  <!-- End of Confirmation Dialog -->
 
 
 
@@ -297,6 +308,21 @@
   });
   dialogLogin.querySelector('.close').addEventListener('click', function() {
     dialogLogin.close();
+  });
+</script>
+<!-- End of Dialog Pop-up Script -->
+<!-- Logout Dialog Pop-up Script -->
+<script>
+  var dialogLogout = document.querySelector('#logout-conf');
+  var showDialogLogoutButton = document.querySelector('#signOutBtn');
+  if (! dialogLogout.showModal) {
+    dialogPolyfill.registerDialog(dialogLogout);
+  }
+  showDialogLogoutButton.addEventListener('click', function() {
+    console.log('Logout Confirmation');
+  });
+  dialogLogout.querySelector('.close').addEventListener('click', function() {
+    dialogLogout.close();
   });
 </script>
 <!-- End of Dialog Pop-up Script -->

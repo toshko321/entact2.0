@@ -36,8 +36,11 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
-app.get('/add', add.addFriend);
+app.get('/', function(req,res) {
+    res.sendfile(__dirname + '/public/loginPage.html');
+});
+app.get('/browse', index.view);
+app.get('/add', add.addEvent);
 
 // Example route
 // app.get('/users', user.list);

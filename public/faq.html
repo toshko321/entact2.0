@@ -49,7 +49,7 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Header Title -->
-      <span class="mdl-layout-title nav-header"><a href="index.html" style="text-decoration:none; color:inherit">Entact</a></span>
+      <span class="mdl-layout-title nav-header"><a href="/browse" style="text-decoration:none; color:inherit">Entact</a></span>
 
       <div class="mdl-layout-spacer"></div>
     </div>
@@ -61,7 +61,7 @@
   <div class="mdl-layout__drawer">
     <nav class="mdl-navigation">
       <!-- Join Events Link -->
-      <a class="mdl-navigation__link nav-link" href="/">
+      <a class="mdl-navigation__link nav-link" href="/browse">
        <i class="material-icons nav-icon">event</i>Join Events
       </a>
       <!-- Create Event Link -->
@@ -92,18 +92,18 @@
           <div class="modal-content">
             <!-- First content -->
             <div class="modal-header">
-              <h4 class="modal-title" align="middle">Register Information</h4>
+              <h4 class="modal-title" align="middle">Why Doesn't The Join Button Do Anything??</h4>
             </div>
             <div class="modal-body">
-              <p>If you do not have a Google account, please click the Register button and select Create Account. This will allow you to create a new Google account with ease.</p>
+              <p>The join button is not linked to completely and does not have full functionality. It simply shows you that the event has been joined, and it gives you an option to cancel it. This is all feax functionality.</p>
             </div>
 
             <!-- Second content -->
             <div class="modal-header">
-              <h4 class="modal-title" align="middle">Log In Information</h4>
+              <h4 class="modal-title" align="middle">How Come The Logout Button Doesn't Do Anything??</h4>
             </div>
             <div class="modal-body">
-              <p>You may enter any email that is linked with Google. For example: tppetrov@ucsd.edu or teodorppetrov@gmail.com. It must be a real, valid existing account.</p>
+              <p>Since we were not able to stick with Firebase, that did not let us keep the convenient Google sign in. So, the logout feature simply says that you are logged out, but you are not, because you never signed in officialy in the first place.</p>
             </div>
 
             <!-- Third content -->
@@ -111,15 +111,7 @@
               <h4 class="modal-title" align="middle">What Can I Do On This Site?</h4>
             </div>
             <div class="modal-body">
-              <p>Once you are logged into your Google account, you will be given options in the sidebar menu which allow you to create and browse events. You may also check the events that you have created and joined.</p>
-            </div>
-
-            <!-- Fourth content -->
-            <div class="modal-header">
-              <h4 class="modal-title" align="middle">Why Did My Event Not Get Created?</h4>
-            </div>
-            <div class="modal-body">
-              <p>Sometimes when it is your first time logging in with Google on our site, it does not realize that there is a signed in user and it does not write it to the database. However, just fill it out a second time and submit the event.</p>
+              <p>Once you have been logged in, you will be given options in the sidebar menu which allow you to create and browse events. You may also check the events that you have created and joined. All conveniently placed on one page.</p>
             </div>
           </div>
         </div>
@@ -130,6 +122,38 @@
 
 </div>
 <!-- End of Layout Wrapper -->
-
+<!-- Logout Confirmation Dialog -->
+  <dialog class="mdl-dialog" id="logout-conf">
+    <h4 class="mdl-dialog__title">Log Out Confirmation</h4>
+    <div class="mdl-dialog__content">
+      <div class="mdl-typography--text-center" style="color:black">
+        Thank You For Using Entact!</br> 
+        Please refresh the page if you wish to use the site again.
+      </div>
+      <hr>
+      <div class="mdl-typography--text-center" style="color:blue">
+        The App That Gets You Intact
+      </div>
+    </div>
+    <!-- <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close" ><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
+    </div> -->
+  </dialog>
+  <!-- End of Confirmation Dialog -->
+  <!-- Logout Dialog Pop-up Script -->
+<script>
+  var dialogLogout = document.querySelector('#logout-conf');
+  var showDialogLogoutButton = document.querySelector('#signOutBtn');
+  if (! dialogLogout.showModal) {
+    dialogPolyfill.registerDialog(dialogLogout);
+  }
+  showDialogLogoutButton.addEventListener('click', function() {
+    console.log('Logout Confirmation');
+  });
+  dialogLogout.querySelector('.close').addEventListener('click', function() {
+    dialogLogout.close();
+  });
+</script>
+<!-- End of Dialog Pop-up Script -->
 </body>
 </html>

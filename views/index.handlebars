@@ -54,16 +54,9 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Header Title -->
-      <span class="mdl-layout-title nav-header"><a href="index.html" style="text-decoration:none; color:inherit">Entact</a></span>
+      <span class="mdl-layout-title nav-header"><a href="/browse" style="text-decoration:none; color:inherit">Entact</a></span>
 
       <div class="mdl-layout-spacer"></div>
-
-      <!-- Sign in Link -->
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="signInBtn" 
-              href=""
-              onclick="onSignIn()">
-        Sign in
-      </button>
     </div>
   </header>
   <!-- End of Page Header -->
@@ -73,7 +66,7 @@
   <div class="mdl-layout__drawer">
     <nav class="mdl-navigation">
       <!-- Join Events Link -->
-      <a class="mdl-navigation__link nav-link" href="/">
+      <a class="mdl-navigation__link nav-link" href="/browse">
        <i class="material-icons nav-icon mdl-">event</i>Join Events
       </a>
       <!-- Create Event Link -->
@@ -95,11 +88,11 @@
 
   <!-- _________________________ PAGE CONTENT STARTS HERE _________________________ -->
  <main class="mdl-layout__content mdl-layout--fixed-drawer ">
-      <div class="page-content">
+      <div class="page-content" style="margin-bottom:25px">
         <!-- Your content goes here -->
           <ul class="collapsible collapsible-accordion" id="event_list" data-collapsible="accordion">
 
-        {{#each friends}}
+        {{#each events}}
       <!-- List Item -->
         <li>
           <!-- Event Header -->
@@ -175,7 +168,7 @@
   <!-- End of Confirmation Dialog -->
 
   <!-- Confirmation Dialog -->
-  <dialog class="mdl-dialog" id="login-conf">
+  <!-- <dialog class="mdl-dialog" id="login-conf">
     <h4 class="mdl-dialog__title">Login Confirmation</h4>
     <div class="mdl-dialog__content">
       <div class="mdl-typography--text-center" style="color:black">
@@ -189,7 +182,7 @@
     <div class="mdl-dialog__actions">
       <button type="button" class="mdl-button close" ><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
     </div>
-  </dialog>
+  </dialog> -->
   <!-- End of Confirmation Dialog -->
 <!-- End of Layout Wrapper -->
   <!-- Logout Confirmation Dialog -->
@@ -197,16 +190,17 @@
     <h4 class="mdl-dialog__title">Log Out Confirmation</h4>
     <div class="mdl-dialog__content">
       <div class="mdl-typography--text-center" style="color:black">
-        You Have Logged Out!
+        Thank You For Using Entact!</br> 
+        Please refresh the page if you wish to use the site again.
       </div>
       <hr>
       <div class="mdl-typography--text-center" style="color:blue">
         The App That Gets You Intact
       </div>
     </div>
-    <div class="mdl-dialog__actions">
+    <!-- <div class="mdl-dialog__actions">
       <button type="button" class="mdl-button close" ><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
-    </div>
+    </div> -->
   </dialog>
   <!-- End of Confirmation Dialog -->
 

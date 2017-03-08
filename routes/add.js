@@ -1,6 +1,6 @@
 var data = require("../data.json");
 
-exports.addFriend = function(req, res) {    
+exports.addEvent = function(req, res) {    
     // Your code goes here
     // Add new friend's data to data object
     var newName = req.query.name;
@@ -12,7 +12,7 @@ exports.addFriend = function(req, res) { 
     var newMembers = req.query.members;
     var newDate = req.query.date;
     
-    var newFriend = {
+    var newEvent = {
         "name": newName, 
         "description": newDescription,
         "creator": newCreator,
@@ -24,7 +24,7 @@ exports.addFriend = function(req, res) { 
         
     };
 
-    data.friends.unshift(newFriend);
+    data.events.unshift(newEvent);
     console.log(data);
     res.render('add', data);
     // Render index.handlebars
