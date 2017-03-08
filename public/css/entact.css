@@ -1,0 +1,47 @@
+#entact-header {
+	font-family: 'Yellowtail', cursive;
+	font-size: 55px;
+	color: white;
+	text-shadow: 4px;
+	float: none;
+}
+
+.fix-font {
+	font-family: 'Roboto', sans-serif;
+}
+
+.fix-navbar {
+	display: inline;
+}
+
+.event-card {
+	padding: 10px;
+	margin: 20px 0px 20px 0px;
+	border-radius: 12px;
+	background-color: #eeeeee ;
+}
+
+.event-location {
+	display: inline-block;
+	padding-right: 5px;
+	margin: 0px;
+}
+
+.event-name {
+	margin-bottom: 10px;
+	margin-top: 0px;
+	display: inline-block;
+}
+
+.event-cd {
+	display: inline-block;
+}
+
+.event-star {
+	display: none;
+	color: gray;
+	font-size: 25px;
+	position: absolute;
+	right: 25px;
+	margin-top: 10px;
+}

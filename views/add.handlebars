@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<html>
+<head>
+  <title>Entact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0">
+  <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="411092546108-jukadttq51mtpt5nc6huvdjhcphh246g.apps.googleusercontent.com">
+
+  <!-- Link CSS -->
+
+  <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css"> -->
+
+  <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"> -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="/css/hci-friends.css">
+  
+    <!-- Local/Custom CSS Links -->
+
+    <link rel="stylesheet" href="/css/style_MDL.css">
+
+    <link rel="stylesheet" href="/css/bootstrap_less.css">
+
+    <link rel="stylesheet" href="/css/materialize_less_A.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Pacifico|Yellowtail" type="text/css">
+
+  <!-- Favicon -->
+  <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'/ >
+
+
+</head>
+
+<body>
+  <!-- Page Content -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+  <!-- Page Header -->
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Header Title -->
+      <span class="mdl-layout-title nav-header"><a href="index.html" style="text-decoration:none; color:inherit">Entact</a></span>
+
+      <div class="mdl-layout-spacer"></div>
+
+      <!-- Sign in Link -->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="signInBtn" 
+              href=""
+              onclick="onSignIn()">
+        Sign in
+      </button>
+    </div>
+  </header>
+  <!-- End of Page Header -->
+
+  <!-- Sidebar -->
+  <div class="mdl-layout__drawer">
+    <nav class="mdl-navigation" style="color: black">
+      <!-- Join Events Link -->
+      <a class="mdl-navigation__link nav-link" href="browseEvents.html">
+       <i class="material-icons nav-icon mdl-">event</i>Join Events
+      </a>
+      <!-- Create Event Link -->
+      <a class="mdl-navigation__link nav-link" href="createEvent.html">
+        <i class="material-icons nav-icon">add</i>Create Event
+      </a>
+      <!-- FAQ Link -->
+      <a class="mdl-navigation__link nav-link" href="faq.html">
+        <i class="material-icons nav-icon">help_outline</i>FAQ
+      </a>
+      <!-- Logout Link -->
+      <a class="mdl-navigation__link nav-link" style="cursor: pointer;" onClick="signOut()">
+        <i class="material-icons nav-icon">exit_to_app</i>Logout
+      </a>
+    </nav>
+  </div>
+  <!-- End of Sidebar -->
+
+  <main class="mdl-layout__content mdl-layout--fixed-drawer ">
+    <div class="page-content">
+      <!-- Your content goes here -->
+      <ul class="collapsible collapsible-accordion" id="event_list" data-collapsible="accordion">
+
+        {{#each friends}}
+      <!-- List Item -->
+        <li class="friend">
+          <!-- Event Header -->
+          <div class="collapsible-header">
+            <!-- Event Name -->
+            <div>
+              <span class="list-item_title">{{name}}</span>
+            </div>
+
+            <div>
+              <!-- Date and Time -->
+              <div>
+                <i class="material-icons list-icon">today</i>
+                <span>2/23/17, 10:00AM</span>
+                <span style="margin-right: 5px; margin-left: 5px;"></span>
+              </div>
+              <!-- Location -->
+              <div>
+                <i class="material-icons list-icon">location_on</i>
+                <span>Geisel Library</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event Body/Collapsed Area -->
+          <div class="collapsible-body mdl-color--indigo-50">
+            <!-- Event Description -->
+            <div>{{description}}</div>
+            </br>
+            <!-- More Event Details -->
+            <div style="display: inline-block;">
+              <b>Items</b> Pancakes, Maple Syrup, Butter</br>
+              <b>Members</b> 100</br>
+              <b> Created by</b> John Doe</br>  
+            </div>
+            <!-- Join Button -->
+          </div>
+        </li>
+        <!-- End of List Item -->
+        {{/each}}
+
+        </ul>
+        </div>
+
+        <form class="col-md-12" id="addFriendForm" role="form" method="get" action="/add">
+          <h3>Add a friend</h3>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <input type="text" class="form-control" id="description" placeholder="Description" name="description">
+            </div>
+            <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
+        </form>
+    </main>
+  </div>
+
+  <!-- Link JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+
+  <script src="/js/jquery-1.11.0.js" type="text/javascript"></script>
+
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+  <!-- <script src="/js/bootstrap.js" type="text/javascript"></script> -->
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+  <script src="/js/hci-friends.js" type="text/javascript"></script>
+    
+    <script src="/js/index.js" type="text/javascript"></script>
+
+    <script src="/js/loginPage.js" type="text/javascript"></script>
+
+  <!-- <script src="js/browseEvents.js" type="text/javascript"></script> -->
+
+
+  
+
+</body>
+</html>

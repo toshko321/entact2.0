@@ -1,0 +1,88 @@
+ul:not(.browser-default) {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+ul:not(.browser-default) li {
+  list-style-type: none;
+}
+
+/*.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}*/
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+    font-size: 14px;
+    list-style-type: none;
+}
+
+.apply-html {
+	line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+}
+
+.collapsible {
+    margin: .5rem 0 1rem 0;
+    padding-left: 0;
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+    box-sizing: border-box;
+}
+
+ul, menu, dir {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+.collapsible-header {
+    display: block;
+    /*cursor: pointer;*/
+    min-height: 3rem;
+    line-height: 3rem;
+    padding: 0 1.5rem;
+    background-color: #fff;
+    /*border-bottom: 1px solid #ddd;*/
+    border-top: 1px solid #ddd;
+
+    box-sizing: border-box;
+    color: rgba(0,0,0,0.87);
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+}
+
+.collapsible-body {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 1rem;
+    list-style-type: none;
+    text-align: -webkit-match-parent;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+    background-color: #fff;
+}
+
+ul:not(.browser-default) li {
+    list-style-type: none;
+}

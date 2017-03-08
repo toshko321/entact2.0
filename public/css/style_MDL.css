@@ -1,0 +1,51 @@
+.nav-header {
+    font-family: 'Yellowtail', cursive;
+    font-size: 50px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.nav-link {
+	font-size: 17px;
+  color: black;
+}
+
+.nav-icon {
+	margin-right: 32px;
+}
+
+.sign-icon {
+  margin-right: 10px;
+}
+
+.form-card {
+  margin: 40px auto;
+  background-color: white;
+  max-width: 800px;
+}
+
+.field-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.list-tile {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.list-tile: hover {
+  background-color: #eee
+}
+
+.list-item_title {
+  font-size: 18px;
+
+}
+
+.list-icon {
+  font-size: 15px;
+}
+
+
