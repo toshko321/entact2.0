@@ -9,6 +9,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
+var index2 = require('./routes/index2');
 var add = require('./routes/add');
 // Example route
 // var user = require('./routes/user');
@@ -39,8 +40,17 @@ if ('development' == app.get('env')) {
 app.get('/', function(req,res) {
     res.sendfile(__dirname + '/public/loginPage.html');
 });
-app.get('/browse', index.view);
+
 app.get('/add', add.addEvent);
+app.get('/browse', index.view);
+
+// GOOGLE ANALYTICS, A-TEST: localhost:3000/A, entact.herokuapp.com/A
+// add route
+app.get('/A', index.view);
+
+// GOOGLE ANALYTICS, B-TEST: localhost:3000/B, entact.herokuapp.com/B
+// browse route
+app.get('/B', index2.view);
 
 // Example route
 // app.get('/users', user.list);

@@ -115,7 +115,14 @@
                 <span>{{location}}</span>
               </div>
             </div>
+            <div class="mdl-typography--text-right">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent join-event"
+                  data-toggle="modal" data-target="#MyModal" onclick="showJoined(this)" id="join-event">Join Event</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hidden"
+                  data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" id="joined-event">Joined</button>
+            </div>
           </div>
+
 
           <!-- Event Body/Collapsed Area -->
           <div class="collapsible-body mdl-color--indigo-50">
@@ -129,13 +136,11 @@
               <b> Created by</b> {{creator}}</br>  
             </div>
             <!-- Join Button -->
-            <div class="mdl-typography--text-right">
+            <!-- <div class="mdl-typography--text-right">
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent join-event"
                       data-toggle="modal" data-target="#MyModal" onclick="showJoined(this)" id="join-event">Join Event</button>
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hidden"
-                      data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" id="joined-event">Joined</button>
-
-
+                      data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" id="joined-event">Joined</button> -->
           </div>
         </li>
         <!-- End of List Item -->
