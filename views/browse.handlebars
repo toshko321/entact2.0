@@ -240,7 +240,11 @@
     dialog.showModal();
     $(button).addClass("hidden");
     $(button).next().removeClass("hidden");
+    {{#if browseA}}
     ga('send', 'event', 'Design A', 'Clicked Join');
+    {{else}}
+    ga('send','event','Design B', 'Clicked Join');
+    {{/if}}
   }
 
   function mouseOverCancel(button) {
