@@ -117,7 +117,7 @@
             </div>
             <div class="mdl-typography--text-right">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent join-event"
-                      data-toggle="modal" data-target="#MyModal" onclick="showJoined(this); _trackEvent(Event B, clickedB)" id="join-event">Join Event</button>
+                      data-toggle="modal" data-target="#MyModal" onclick="showJoined(this);" id="join-event">Join Event</button>
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hidden"
                   data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" id="joined-event">Joined</button>
             </div>
@@ -228,6 +228,7 @@
     dialog.showModal();
     $(button).addClass("hidden");
     $(button).next().removeClass("hidden");
+    ga('send', 'event', 'Event A Clicked', 'click');
   }
 
   function mouseOverCancel(button) {
