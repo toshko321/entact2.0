@@ -1,0 +1,54 @@
+{
+	"events": [
+		{
+			"name": "CSE 170 Midterm Study Group",
+			"description": "Hey guys, I am struggling with the material and would like to study with others. Let's group up and review the material for the midterm.",
+			"location": "Biomedical Library, 2nd Floor",
+			"date": "March 9, 2017",
+			"time": "6:30 PM",
+			"items": "Laptops, White Paper, Pencils",
+			"members": "6",
+			"creator": "Ted"
+		},
+		{
+			"name": "COGS 120 Midterm Study Group",
+			"description": "Hi, I am having a hard time with the material and need help. Let's group up and review the material for the midterm.",
+			"location": "Geisel Library, 2nd Floor West",
+			"date": "March 11, 2017",
+			"time": "4:30 PM",
+			"items": "Laptops, Pencils",
+			"members": "4",
+			"creator": "Kellie"
+		},
+		{
+			"name": "Clubbing in Gaslamp",
+			"description": "Looking to go to some clubs in downtown SD. Let's meet up if you are looking for a new connection.",
+			"location": "The Village",
+			"date": "March 10, 2017",
+			"time": "7:30 PM",
+			"items": "Drivers License, Water",
+			"members": "4",
+			"creator": "Kevin"
+		},
+		{
+			"name": "Pick-up Friendly Soccer Match",
+			"description": "I am a foreign exchange student here and am looking to play some soccer! Indoor or outdoor is fine with me. Lets have fun!",
+			"location": "RIMAC Field",
+			"date": "March 14, 2017",
+			"time": "5:30 PM",
+			"items": "2 Soccer Balls, Water, Snacks",
+			"members": "14",
+			"creator": "Nicolas"
+		},
+		{
+			"name": "Web Design Studio",
+			"description": "Offering a free studio on tips and tricks about web design. I highly recommend!",
+			"location": "CENTER 109",
+			"date": "March 13, 2017",
+			"time": "12:00 PM",
+			"items": "Laptops",
+			"members": "100",
+			"creator": "Scott Klemmer"
+		}
+	]
+}

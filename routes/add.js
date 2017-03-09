@@ -1,5 +1,9 @@
-var data = require("../data.json");
+var data = require("../events.json");
 var d3 = require("d3");
+
+function uniqId() {
+  return Math.round(new Date().getTime() + (Math.random() * 100));
+}
 
 exports.addEvent = function(req, res) {    
     // Your code goes here
@@ -12,15 +16,14 @@ exports.addEvent = function(req, res) { 
     var newItems = req.query.items;
     var newMembers = req.query.members;
     var newDate = req.query.date;
-    //var formattedDate = formatDate(newDate);
+    var newID = uniqId();
 
-    //var dateLast = "2016-02-18";
     var format = d3.timeFormat("%B %d, %Y");
     var formattedDate = format(new Date(newDate));
-
     var formattedTime = formatTime(newTime);
     
     var newEvent = {
+        "id": newID,
         "name": newName, 
         "description": newDescription,
         "creator": newCreator,
@@ -29,14 +32,12 @@ exports.addEvent = function(req, res) { 
         "items": newItems,
         "members": newMembers,
         "date": formattedDate
-        
     };
 
     data.events.unshift(newEvent);
     console.log(data);
-    res.render('add', data);
-    // Render index.handlebars
- }
+    res.render('browse',data);
+}
 
 function formatTime(time24) 
 {
@@ -48,4 +49,3 @@ function formatTime(time24)
   ts = h + ts.substr(2, 3) + ampm;
   return ts;
 };
-

@@ -8,9 +8,13 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-var index = require('./routes/index');
-var index2 = require('./routes/index2');
+var login = require('./routes/login');
+// var browse_A = require('./routes/browse_A');
+// var browse_B = require('./routes/browse_B');
+var browse = require('./routes/browse');
 var add = require('./routes/add');
+var createEvent = require('./routes/createEvent');
+var faq = require('./routes/faq');
 // Example route
 // var user = require('./routes/user');
 
@@ -37,20 +41,19 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', function(req,res) {
-    res.sendfile(__dirname + '/public/loginPage.html');
-});
+// app.get('/', function(req,res) {
+//     res.sendfile(__dirname + '/public/loginPage.html');
+// });
 
+app.get('/', login.view);
 app.get('/add', add.addEvent);
-app.get('/browse', index.view);
+app.get('/createEvent', createEvent.view);
+app.get('/FAQ', faq.view);
 
-// GOOGLE ANALYTICS, A-TEST: localhost:3000/A, entact.herokuapp.com/A
-// add route
-app.get('/A', index.view);
-
-// GOOGLE ANALYTICS, B-TEST: localhost:3000/B, entact.herokuapp.com/B
-// browse route
-app.get('/B', index2.view);
+// app.get('/browse', browse.view);
+app.get('/browse', browse.view);
+app.get('/browse_A', browse.viewA);
+app.get('/browse_B', browse.viewB);
 
 // Example route
 // app.get('/users', user.list);
