@@ -58,7 +58,7 @@ ul, menu, dir {
     line-height: 3rem;
     padding: 0 1.5rem;
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
     border-top: 1px solid #ddd;
 
     box-sizing: border-box;

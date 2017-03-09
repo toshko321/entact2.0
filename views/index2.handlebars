@@ -17,7 +17,7 @@
   <!-- Local/Custom CSS Links -->
   <link rel="stylesheet" href="css/style_MDL.css">
   <link rel="stylesheet" href="css/bootstrap_less.css">
-  <link rel="stylesheet" href="css/materialize_less_A.css">
+  <link rel="stylesheet" href="css/materialize_less_B.css">
 
 
   <!-- JavaScript Links -->
@@ -25,7 +25,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script> -->
 
 
   <!-- Local/Custom JavaScript Links -->
@@ -115,17 +115,10 @@
                 <span>{{location}}</span>
               </div>
             </div>
-            <div class="mdl-typography--text-right">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent join-event"
-                      data-toggle="modal" data-target="#MyModal" onclick="showJoined(this);" id="join-event">Join Event</button>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hidden"
-                  data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" id="joined-event">Joined</button>
-            </div>
           </div>
 
-
           <!-- Event Body/Collapsed Area -->
-          <div class="collapsible-body mdl-color--indigo-50">
+          <div class="collapsible-body">
             <!-- Event Description -->
             <div>{{description}}</div>
             </br>
@@ -136,11 +129,13 @@
               <b> Created by</b> {{creator}}</br>  
             </div>
             <!-- Join Button -->
-            <!-- <div class="mdl-typography--text-right">
+            <div class="mdl-typography--text-right">
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent join-event"
-                      data-toggle="modal" data-target="#MyModal" onclick="showJoined(this)" id="join-event">Join Event</button>
+                      data-toggle="modal" data-target="#MyModal" onclick="showJoined(this);" id="join-event">Join Event</button>
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hidden"
-                      data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" id="joined-event">Joined</button> -->
+                      data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" id="joined-event">Joined</button>
+
+
           </div>
         </li>
         <!-- End of List Item -->
@@ -228,7 +223,7 @@
     dialog.showModal();
     $(button).addClass("hidden");
     $(button).next().removeClass("hidden");
-    ga('send', 'event', 'Design B', 'Clicked Join');
+    ga('send', 'event', 'Design A', 'Clicked Join');
   }
 
   function mouseOverCancel(button) {
@@ -318,7 +313,7 @@
 </script>
 <!-- End of Tests -->
 
-<!-- GOOGLE ANALYTICS TEST B -->
+<!-- GOOGLE ANALYTICS TEST A -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
