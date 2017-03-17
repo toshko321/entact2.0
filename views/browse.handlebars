@@ -40,7 +40,8 @@
 
 
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Pacifico|Yellowtail" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Pacifico|Yellowtail|Raleway" type="text/css">
+
 
   <!-- Favicon -->
   <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
@@ -99,68 +100,69 @@
 
 
   <!-- _________________________ PAGE CONTENT STARTS HERE _________________________ -->
- <main class="mdl-layout__content mdl-layout--fixed-drawer ">
+  <main class="mdl-layout__content mdl-layout--fixed-drawer ">
       <div class="page-content" style="margin-bottom:25px">
         <!-- Your content goes here -->
-          <ul class="collapsible collapsible-accordion" id="event_list" data-collapsible="accordion">
+        <ul class="collapsible collapsible-accordion" id="event_list" data-collapsible="accordion">
+          {{#each events}}
+          <!-- List Item -->
+          <li>
+            <!-- Event Header -->
+            <div class="collapsible-header" style="margin-bottom:15px">
+                <!-- Event Name -->
+                <div>
+                  <span class="list-item_title"><b>{{name}}</b></span>
+                  <span class="pull-right joined-status hidden">
+                  Joined
+                  </span>
+                </div>
 
-      {{#each events}}
-      <!-- List Item -->
-        <li id="{{id}}">
-          <!-- Event Header -->
-          <div class="collapsible-header" style="margin-bottom:15px">
-            <!-- Event Name -->
-            <div>
-              <span class="list-item_title">{{name}}</span>
+                <!-- Secondary Info -->
+                <div>
+                  <!-- Date and Time -->
+                  <div>
+                    <i class="material-icons list-icon">today</i>
+                    <span>{{date}}, {{time}}</span>
+                    <span style="margin-right: 5px; margin-left: 5px;"></span>
+                  </div>
+                  <!-- Location -->
+                  <div>
+                    <i class="material-icons list-icon">location_on</i>
+                    <span>{{location}}</span>
+                  </div>
+                </div>
             </div>
-
-            <div>
-              <!-- Date and Time -->
-              <div>
-                <i class="material-icons list-icon">today</i>
-                <span>{{date}}, {{time}}</span>
-                <span style="margin-right: 5px; margin-left: 5px;"></span>
+            <!-- Event Body/Collapsed Area -->
+            <div class="collapsible-body body-color">
+              <!-- Event Description -->
+              <div>{{description}}</div>
+              </br>
+              <!-- More Event Details -->
+              <ul style="display: inline-block;">
+                <li><b>All Items Required:</b>
+                  <ul>
+                    <li><input type="checkbox">Laptops</li>
+                    <li><input type="checkbox">White Paper</li>
+                    <li><input type="checkbox">Pencils</li>
+                  </ul></li>
+                <li><b>Total Members:</b> {{members}}</li>
+                <li><b>Created by</b> {{creator}}</li>  
+              </ul>
+              <!-- Join Button -->
+              <div class="mdl-typography--text-right">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent join-event"
+                        data-toggle="modal" data-target="#MyModal" onclick="showJoined(this);" id="join-event" type="submit">Join Event</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hidden mdl-color--red"
+                        data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" 
+                        onmouseout="mouseOutCancel(this)" id="joined-event">Cancel</button>
               </div>
-              <!-- Location -->
-              <div>
-                <i class="material-icons list-icon">location_on</i>
-                <span>{{location}}</span>
-              </div>
             </div>
-          </div>
-
-          <!-- Event Body/Collapsed Area -->
-
-          <div class="collapsible-body body-color">
-
-
-
-            <!-- Event Description -->
-            <div>{{description}}</div>
-            </br>
-            <!-- More Event Details -->
-            <div style="display: inline-block;">
-              <b>All Items Required:</b> {{items}}</br>
-              <b>Total Members:</b> {{members}}</br>
-              <b> Created by</b> {{creator}}</br>  
-            </div>
-            <!-- Join Button -->
-            <div class="mdl-typography--text-right">
-
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent join-event"
-                      data-toggle="modal" data-target="#MyModal" onclick="showJoined(this);" id="join-event" type="submit">Join Event</button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hidden"
-                      data-toggle="modal" data-target="#MyModal" onclick="showJoin(this)" onmouseover="mouseOverCancel(this)" onmouseout="mouseOutCancel(this)" id="joined-event">Joined</button>
-
-
-          </div>
-        </li>
-        <!-- End of List Item -->
-        {{/each}}
-
+          </li>
+          <!-- End of List Item -->
+          {{/each}}
         </ul>
-        </div>
-    </main>
+      </div>
+  </main>
   <!-- _________________________ PAGE CONTENT ENDS HERE _________________________ -->
 
 </div>
@@ -179,7 +181,7 @@
       </div>
     </div>
     <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button close" onclick="closeDialog()"><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
+      <button type="button" class="mdl-button " onclick="closeDialog()"><i class="material-icons mdl-button--mini-icon">clear</i>Close</button>
     </div>
   </dialog>
   <!-- End of Confirmation Dialog -->

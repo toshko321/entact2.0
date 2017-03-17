@@ -40,12 +40,23 @@
 }
 
 .list-item_title {
-  font-size: 18px;
-
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Raleway', Sans-serif;
 }
 
 .list-icon {
   font-size: 15px;
+}
+
+.joined-status {
+  font-size: 16px;
+  color: #3F51B5;
+  background-color: #eee;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 7px;
 }
 
 

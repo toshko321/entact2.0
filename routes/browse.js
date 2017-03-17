@@ -2,6 +2,7 @@
 var data = require('../events.json');
 
 exports.view = function(req,res){
+	data["browseA"] = true;
 	res.render('browse',data);
 }
 
